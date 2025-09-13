@@ -121,3 +121,27 @@ VALUES
     (1, 4),
     (1, 5),
     (1, 6);
+
+    SELECT
+    m.movie_id,
+    d.director_id
+    d.director_name,
+    m.title,
+    m.status,
+    m.age_rating,
+    m.runtime_min,
+    m.release_date,
+    m.trailer_link,
+    m.description,
+    m.banner_text,
+    m.header_image,
+    m.poster_image,
+    m.synopsis,
+    c.cast_name,
+    g.genre_name
+    FROM movies m
+    INNER JOIN directors d ON m.director_id = d.director_id
+    INNER JOIN movie_cast mc ON mc.movie_id = m.movie_id
+    INNER JOIN cast_member c ON mc.cast_id = c.cast_id
+    INNER JOIN movie_genre mg ON m.movie_id = mg.movie_id
+    INNER JOIN genre g ON mg.genre_id = g.genre_id

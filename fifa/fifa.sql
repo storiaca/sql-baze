@@ -7,3 +7,8 @@ CREATE TABLE teams (
     updated_at timestamp NOT NULL DEFAULT current_timestamp(),
     CONSTRAINT pk_teams PRIMARY KEY (team_id)
 );
+
+INSERT INTO
+    teams (team_id, name, short_name)
+VALUES
+    (1, 'Australia', 'AUS');

@@ -12,3 +12,8 @@ INSERT INTO
     teams (team_id, name, short_name)
 VALUES
     (1, 'Australia', 'AUS');
+
+-- This is a comment
+/*
+  This block is a comment
+*/
